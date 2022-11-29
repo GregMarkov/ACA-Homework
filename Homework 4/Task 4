@@ -1,0 +1,18 @@
+function Circle(rad){
+    this.radius = rad;
+    this.diameter = 2 * rad;
+}
+
+const circle = new Circle(5);
+
+Circle.prototype.getC = function () {
+    return Math.round(this.diameter * Math.PI / 100) * 100; 
+}
+
+Circle.prototype.getA = function () {
+    return Math.round(Math.pow(this.radius, 2) * Math.PI / 100) * 100; 
+}
+
+
+console.log(circle);
+console.log(circle.getA());

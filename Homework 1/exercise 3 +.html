@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  let arr = [1, 18, 43, 42, 72];
+  let oddNumbers = [];
+  let evenNumbers = [];
+
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] % 2 === 0){
+      evenNumbers.unshift(arr[i]);
+    } else {
+      oddNumbers.unshift(arr[i]);
+    }
+  }
+
+  document.write('Odd numbers are ' + oddNumbers + ' and even numbers are ' + evenNumbers);
+
+    </script>
+  </body>
+</html>

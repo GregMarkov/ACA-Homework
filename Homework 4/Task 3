@@ -1,0 +1,41 @@
+function TV(brand, channel, volume){
+    this.brand = brand;
+    this.channel = channel;
+    this.volume = volume;
+}
+
+const tv = new TV('Samsung', 1, 50);
+
+TV.prototype.increaseVolume = function (vol) {
+    if (this.volume + vol <= 100) {
+        this.volume += vol;
+    }
+}
+
+TV.prototype.decreaseVolume = function (vol) {
+    if (this.volume - vol >= 0) {
+        this.volume -= vol;
+    }
+}
+
+TV.prototype.setChannel = function (chan) {
+    if (chan > 0 && chan <= 50) {
+        this.channel = chan;
+    }
+}
+
+TV.prototype.resetTV = function () {
+    this.brand = 'Samsung';
+    this.channel = 1;
+    this.volume = 50;
+}
+
+tv.increaseVolume(5);
+tv.increaseVolume(50);
+tv.decreaseVolume(50);
+tv.setChannel(5);
+tv.resetTV();
+
+
+
+console.log(`${tv.brand} at channel ${tv.channel}, volume ${tv.volume}`);

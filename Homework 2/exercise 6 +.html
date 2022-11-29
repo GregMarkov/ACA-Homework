@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  function myFunction(arr) {
+    let numberBefore = arr[0];
+    let count = 1;
+    let checkNumber = 0;
+    for (let i = 0; i < arr.length; i++) {
+      checkNumber += arr[i];
+      if (arr[count] > numberBefore) {
+        numberBefore += arr[count];
+        count++;
+        }
+      }
+      if (numberBefore === checkNumber) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+
+  document.write(myFunction([2,3,7,13,28]));
+
+    </script>
+  </body>
+</html>

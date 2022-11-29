@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+    function reverseString(str) {
+        let stringToArray = str.split('');
+        let newArray = [];
+        for (let i = 0; i < stringToArray.length; i++){
+          newArray.unshift(stringToArray[i]);
+        }
+
+        // or just use reverse():
+        //let newArray = stringToArray.reverse();
+
+        let newString = newArray.join('');
+        return newString;
+    }
+
+    document.write(reverseString('asdf'));
+
+    </script>
+  </body>
+</html>

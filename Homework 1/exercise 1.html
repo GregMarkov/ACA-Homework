@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  function uniqueDigit(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++){
+      let counter = 0;
+      let digit = arr[counter];
+        if (digit === arr[i]) {
+          counter += 1;
+      } else {
+        newArr.push(digit);
+        counter += 1;
+      }
+    }
+    document.write(counter);
+  }
+
+    uniqueDigit([3, 6, 3, 1, 1, 4, 5, 5])
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  let arr1 = [5, 3, 1, 7];
+  let arr2 = [11, 5, 3];
+  let newArr = [];
+
+  function functionName(arr1, arr2) {
+    for (let i = 0; i < arr1.length; i++){
+      for (let j = 0; j < arr2.length; j++) {
+        if (arr2[j] === arr1[i]) {
+          newArr.unshift(arr2[j]);
+        }
+      }
+    }
+    if (newArr.sort().join('') === arr2.sort().join('')){
+      return true;
+    } else {
+      return false;
+    }
+  }
+    document.write(functionName (arr1, arr2));
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework 2</title>
+</head>
+  <body>
+    <script>
+
+  function squareNums(nums) {
+    let squareNumbers = 0;
+    let squareRootNumbers = 0;
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] % 2 === 0) {
+        squareNumbers += Math.pow(nums[i], 2);
+      } else {
+        squareRootNumbers += Math.sqrt(nums[i]);
+      }
+    }
+    return Math.round((squareNumbers + squareRootNumbers)*100)/100;
+  }
+
+  document.write(squareNums([1, 31, 3, 11, 0]));
+
+    </script>
+  </body>
+</html>

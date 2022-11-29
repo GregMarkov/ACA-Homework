@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  function getEvenNums(x, y) {
+    let numsBetween = [];
+    if (x < y){
+      for (let i = x + 1; i < y; i++){
+        if (i % 2 === 0){
+          numsBetween.unshift(i);
+        } else {
+          document.write('there are no even numbers');
+        }
+      }
+    } else if (x > y) {
+      for (let i = y + 1; i < x; i++){
+        if (i % 2 === 0){
+          numsBetween.unshift(i);
+        } else {
+          document.write('there are no even numbers');
+        }
+      }
+    }
+    return numsBetween;
+  }
+  document.write(getEvenNums(12, 10))
+
+    </script>
+  </body>
+</html>

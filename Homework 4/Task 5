@@ -1,0 +1,79 @@
+function CoffeeShop(){
+    this.name = 'StarBucks';
+    this.menu = [];
+    this.orders = ['Late', 'Fanta'];
+    }
+
+function MenuPositions(name, type, price) {
+    this.menuPositionName = name;
+    this.menuPositionType = type;
+    this.menuPositionPrice = price;
+}
+const starBucks = new CoffeeShop();
+
+const menuPosition1 = new MenuPositions('Hot Dog', 'food', '2.5 $');
+const menuPosition2 = new MenuPositions('Late', 'drink', '1.5 $');
+const menuPosition3 = new MenuPositions('Fries', 'food', '1.5 $');
+const menuPosition4 = new MenuPositions('Fanta', 'drink', '1 $');
+
+starBucks.menu.push(menuPosition1, menuPosition2, menuPosition3, menuPosition4);
+
+
+CoffeeShop.prototype.addOrder = function (order) {
+    let tempArray = starBucks.menu.map(item => item.menuPositionName);
+    let tempOrder;
+    for (let i = 0; i < tempArray.length; i++) {
+        if (order === tempArray[i]) {
+            tempOrder = order; 
+        }
+    }
+    if (tempOrder) {
+        starBucks.orders.push(tempOrder);
+        return 'Order added';
+    } else {
+        return 'This item is currently unavailable!';
+    }
+}
+
+CoffeeShop.prototype.fulfillOrder = function () {
+    if (starBucks.orders.length > 0) {
+        let yourOrder = starBucks.orders[0];
+        starBucks.orders.shift();
+        return `The ${yourOrder} is ready!`;        
+    } else {
+        return `"All orders have been fulfilled!`;
+    }
+}
+
+CoffeeShop.prototype.listOrders = function () {
+        console.log(starBucks.orders);        
+}
+
+CoffeeShop.prototype.dueAmount = function () {
+    let count = 0;
+    for (let i = 0; i < starBucks.orders.length; i++) {
+        let tempArray = starBucks.menu.filter(item => item.menuPositionName === starBucks.orders[i]);
+        let amount = tempArray.map(item => item.menuPositionPrice);
+        count += Number(amount.join('').replace('$', ''));
+    }
+    return count;
+}
+
+CoffeeShop.prototype.cheapestItem = function () {
+    let tempArray = starBucks.menu.map(item => Number(item.menuPositionPrice.replace('$', '')));
+    let smallestAmount = tempArray.sort((a, b) => a - b)[0] + ' $';
+    let cheapest = starBucks.menu.filter(item => item.menuPositionPrice === smallestAmount);
+    return cheapest[0].menuPositionName;
+}
+
+CoffeeShop.prototype.drinksOnly = function () {
+    let tempArray = starBucks.menu.filter(item => item.menuPositionType === 'drink');
+    let drinksOnly = tempArray.map(item => item.menuPositionName);
+    return drinksOnly;
+}
+
+CoffeeShop.prototype.foodOnly = function () {
+    let tempArray = starBucks.menu.filter(item => item.menuPositionType === 'food');
+    let foodOnly = tempArray.map(item => item.menuPositionName);
+    return foodOnly;
+}

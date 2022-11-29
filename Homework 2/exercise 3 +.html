@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework 2</title>
+</head>
+  <body>
+    <script>
+
+    function fibNumbers(count) {
+      let firstDig = 1;
+      let secondDig = 1;
+      let res = 0;
+      if (count > 1) {
+        for (let i = 1; i < count; i++) {
+          res = firstDig + secondDig;
+          firstDig = secondDig;
+          secondDig = res;
+        }
+        return res;
+      } else {
+        return 1;
+      }
+    }
+
+    document.write(fibNumbers(0));
+
+    </script>
+  </body>
+</html>

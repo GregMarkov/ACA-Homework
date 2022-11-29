@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  let arr = [1, 'ag', 3, 'huh', 2];
+  let str = [];
+  let num = [];
+
+  for (let i = 0; i < arr.length; i++){
+    if (typeof arr[i] === 'string'){
+      str.unshift(arr[i]);
+    } else if (typeof arr[i] === 'number'){
+      num.unshift(arr[i]);
+    }
+  }
+
+  document.write('Here are numbers ' + num + ' and strings ' + str);
+
+    </script>
+  </body>
+</html>

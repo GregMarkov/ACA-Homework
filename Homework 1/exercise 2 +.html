@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  let arr = [-3, -16, -4, -8, -1];
+  let maxNumber = arr[0];
+  let minNumber = arr[0];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] > maxNumber) {
+        maxNumber = arr[i];
+    } else if (arr[i] < minNumber) {
+        minNumber = arr[i];
+    }
+  }
+
+    document.write('The highest number is ' + maxNumber + ' and the lowest number is ' + minNumber);
+
+    </script>
+  </body>
+</html>

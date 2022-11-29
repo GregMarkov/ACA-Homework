@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  function halfNum(num) {
+    let arr = [];
+    if (num % 2 === 0){
+      let a = num / 2;
+      arr.unshift(a, a);
+    } else {
+      let a = Math.round(num / 2);
+      let b = Math.floor(num/ 2);
+      arr.unshift(b, a);
+    }
+    return arr;
+  }
+    document.write(halfNum(1))
+
+    </script>
+  </body>
+</html>

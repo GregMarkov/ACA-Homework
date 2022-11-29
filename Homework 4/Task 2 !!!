@@ -1,0 +1,15 @@
+function mapLetters(str) {
+    let newObj = {};
+    for (let i = 0; i < str.length; i++) {
+        if (!newObj[str[i]]) {
+            newObj[str[i]] = [i];
+        }
+        else{
+            newObj[str[i]].push(i);
+        }
+    }
+    return newObj;
+}
+
+console.log(mapLetters("dodopao"));
+

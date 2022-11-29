@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+  function reverseArray(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++){
+      newArr.unshift(arr[i]);
+    }
+    return newArr;
+  }
+
+  document.write(reverseArray([1, 5, 4]))
+
+    </script>
+  </body>
+</html>

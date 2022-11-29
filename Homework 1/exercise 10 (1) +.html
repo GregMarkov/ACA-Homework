@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+    let arr1 = ['as', 'asd', 'jsdh', 'uyas', 'has'];
+    let arr2 = ['has', 'asa', 'hgsa', 'asd'];
+    function functionName() {
+      let newArr = [];
+      for (let i = 0; i < arr1.length; i++){
+        for (let j = 0; j < arr2.length; j++){
+          if (arr1[i] === arr2[j]) {
+            newArr.push(arr1[i]);
+          }
+        }
+      }
+      return newArr;
+    }
+
+    document.write(functionName(arr1, arr2))
+
+    </script>
+  </body>
+</html>

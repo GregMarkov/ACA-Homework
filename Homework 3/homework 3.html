@@ -1,0 +1,604 @@
+    <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Заголовок страницы</title>
+</head>
+  <body>
+    <script>
+
+    const employees = [
+  {
+  "firstName": "Arabela",
+  "lastName": "Fockes",
+  "email": "afockes0@wired.com",
+  "salary": "$6.18",
+  "isEngineer": true,
+  "gender": "Female"
+  },
+  {
+  "firstName": "Bryant",
+  "lastName": "Marchi",
+  "email": "bmarchi1@theatlantic.com",
+  "salary": "$8.05",
+  "isEngineer": false,
+  "gender": "Male"
+  },
+  {
+  "firstName": "Batholomew",
+  "lastName": "Eim",
+  "email": "beim2@goodreads.com",
+  "salary": "$7.26",
+  "isEngineer": true,
+  "gender": "Male"
+  },
+  {
+  "firstName": "Ritchie",
+  "lastName": "Ferreira",
+  "email": "rferreira3@booking.com",
+  "salary": "$4.07",
+  "isEngineer": true,
+  "gender": "Male"
+  },
+  {
+  "firstName": "Kaylyn",
+  "lastName": "Ivain",
+  "email": "kivain4@gmpg.org",
+  "salary": "$5.89",
+  "isEngineer": false,
+  "gender": "Female"
+  },
+  {
+  "firstName": "Wilhelmina",
+  "lastName": "Portigall",
+  "email": "wportigall5@plala.or.jp",
+  "salary": "$2.06",
+  "isEngineer": false,
+  "gender": "Female"
+  },
+  {
+  "firstName": "Rouvin",
+  "lastName": "Gillcrist",
+  "email": "rgillcrist6@aol.com",
+  "salary": "$7.29",
+  "isEngineer": true,
+  "gender": "Male"
+  },
+  {
+  "firstName": "Flemming",
+  "lastName": "Scroggins",
+  "email": "fscroggins7@msu.edu",
+  "salary": "$7.54",
+  "isEngineer": false,
+  "gender": "Male"
+  },
+  {
+  "firstName": "Sallee",
+  "lastName": "Schlagh",
+  "email": "sschlagh8@reuters.com",
+  "salary": "$2.24",
+  "isEngineer": false,
+  "gender": "Female"
+  },
+  {
+  "firstName": "Roxine",
+  "lastName": "Bedo",
+  "email": "rbedo9@whitehouse.gov",
+  "salary": "$6.47",
+  "isEngineer": false,
+  "gender": "Female"
+  }
+  ]
+
+// ex 1
+//   function employeesNames(obj) {
+//     const names = obj.map(el => el.firstName + ' ' + el.lastName);
+//     return names.toString(',');
+//   }
+//
+//   console.log(employeesNames(employees));
+//
+// // ex 2
+// function employeesMailSalary(obj) {
+//   const emailSalary = obj.map(el => el.email + ': ' + el.salary);
+//   return emailSalary.toString(',');
+// }
+//
+// console.log(employeesMailSalary(employees));
+//
+// // ex 3
+// let arr = [1,2,3,4];
+// Array.prototype.myToString = function () {
+//   let str = this + '';
+//   return str;
+// }
+// console.log(arr.myToString());
+//
+// // ex 4
+// function employeesMail(obj) {
+//   const mail = obj.map(el => el.email);
+//   return mail.join('/ /');
+// }
+//
+// console.log(employeesMail(employees));
+//
+// // ex 5
+// function employeesMailSalary2(obj) {
+//   const mailSalary2 = obj.map(el => el.email + ': ' + el.salary);
+//   return mailSalary2.join(', ');
+// }
+//
+// console.log(employeesMailSalary2(employees));
+//
+// // ex 6
+// let arr2 = [2,3,4];
+// Array.prototype.myJoin = function (devider) {
+//   let newArr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     newArr.push(this[i]);
+//   }
+//   return newArr.toString().replace(/,/g, devider);
+// }
+// console.log(arr2.myJoin('-'));
+//
+// // ex 7
+// let myArray = [1, 2, 3, 4];
+// function reverseArray(arr) {
+//   let newMyArr = [];
+//   for (let i = arr.length; i > 0; i--) {
+//     newMyArr.push(arr.pop());
+//   }
+//   return newMyArr;
+// }
+// console.log(reverseArray(myArray));
+//
+// // ex 8
+// let myString = 'polap';
+// function palindrome(str) {
+//   let toArray = str.split('');
+//   for (let i = 0; i < str.length; i++) {
+//     let firstDig = toArray.shift();
+//     let lastDig = toArray.pop();
+//   if (firstDig === lastDig) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+//   }
+// }
+// console.log(palindrome(myString));
+
+// ex 9 ********
+// let test = [2,3,4];
+// Array.prototype.myPop = function () {
+//   let newArr = [];
+//   for (let i = 0; i < this.length - 1; i++) {
+//     newArr.push(this[i]);
+//   }
+//   return newArr;
+// }
+// console.log(test.myPop());
+
+// ex 10
+// function evenDigitsArray(num) {
+//   let arr = [];
+//   let str = num.toString();
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] % 2 === 0) {
+//       arr.push(str[i]);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(evenDigitsArray(61514));
+
+// ex 11
+// function twoCollections(obj) {
+//   let newArr = [...obj];
+//   for (let i = 0; i < obj.length; i++) {
+//     newArr.push(obj[i]);    
+//   }
+//   return newArr;
+// }
+
+// console.log(twoCollections(employees));
+
+// ex 12
+// let test = [2,3,4];
+// Array.prototype.myPush = function (add) {
+//  this[this.length] = add;
+//   return this;
+// }
+// console.log(test.myPush(5));
+
+// // ex 13 *********
+// let test = [2,3,4];
+// Array.prototype.myShift = function () {
+//   let newArr = [];
+//   for (let i = 1; i < this.length; i++) {
+//     newArr.push(this[i]);
+//   }
+//   return newArr;
+// }
+// console.log(test.myShift());
+
+// // ex 14
+// // let test = [2,3,4];
+// Array.prototype.myUnshift = function (add) {
+//   let newArr = [add];
+//   let result = newArr.concat(this);
+//   return result;
+// }
+// console.log(test.myUnshift(1));
+
+// ex 15
+// let array1 = [6, 1, 7, 8, 1];
+// let array2 = [1, 7, 5, 1, 8, 0];
+// let union = array1.concat(array2);
+// let result = union.filter((el, index) => union.indexOf(el) === index);
+// console.log(result);
+
+// ex 16
+// let array1 = [1, 2];
+// let array2 = [3, 4];
+// Array.prototype.myConcat = function (add) {
+//   let result = [...this, ...add];
+//   return result;
+// }
+// console.log(array1.myConcat(array2));
+
+// ex 17
+// function sortingNumbers(arr) {
+//   let newArr = [];
+//     for (let j = arr[0]; j <= arr.at(-1); j++) {
+//       if (arr.indexOf(j) === -1) {
+//         newArr.push(j);
+//       }
+//   }
+//     newArr.splice(arr.at(-1), 0, arr);
+//     let result = newArr.flat().sort();
+//     return result;
+//   }
+// console.log(sortingNumbers([4, 5, 8]));
+
+// Easier way
+
+// function sortingNumbers(arr) {
+//   let newArr = [];
+//     for (let j = arr[0]; j <= arr.at(-1); j++) {
+//       newArr.push(j);
+//     }
+//     return newArr;
+//   }
+// console.log(sortingNumbers([4, 5, 8, 16]));
+
+// ex 18
+// function sortingNumbers(arr) {
+//     arr.forEach((item) => {
+//       if (arr.indexOf(item) !== arr.lastIndexOf(item)) {
+//         arr.splice(arr.lastIndexOf(item), 1);
+//       }
+//     });
+//     return arr;
+//   }
+// console.log(sortingNumbers([4, 4, 5, 5, 6, 4, 8, 8]));
+
+// ex 19 **********
+// let test = [2,3,4,5,6,7];
+// Array.prototype.mySplice = function (index, count, add) {
+//   for (let i = index; i <= this.length; i++) {
+//     if (count > 0 && !add) {
+//       delete this[index];
+//     } else if (count > 0 && add) {
+//       this[index] = add;
+//     }
+//   }
+//   return this;
+// }
+// console.log(test.mySplice(1, 1));
+
+// ex 20
+// let myArray = [1, 2, 3, 4];
+
+// function clone(arr) {
+//   let cloneArray = myArray.slice(0, myArray.length);
+//   return cloneArray;
+// }
+
+// console.log(clone(myArray));
+
+// ex 21
+// let myArray = [1, 2, 3, 4];
+
+// function lastEl(arr, n) {
+//   if (n) {
+//     return arr.slice(-n, arr.length);
+//   }  else{
+//     return arr.slice(-1);
+//   }
+// }
+
+// console.log(lastEl(myArray, 2));
+
+// ex 22
+// let myArray = [1, 2, 3, 4];
+
+// function firstEl(arr, n) {
+//   if (n) {
+//     return arr.slice(0, n);
+//   }  else{
+//     return arr.slice(0, 1);
+//   }
+// }
+
+// console.log(firstEl(myArray));
+
+// ex 23
+// let test = [1, 2, 3, 4];
+// Array.prototype.mySlice = function (index, count) {
+//   let newArr = [];
+//   for (let i = index; i < this.length; i++) {
+//     if (count) {
+//       newArr.push(this[i]);
+//       this.length = count;
+//     }  else {
+//       newArr.push(this[i]);
+//     }  
+//   }
+//   return newArr;
+// }
+// console.log(test.mySlice(0, 2));
+
+
+// // ex 24
+// function maxNumber(arr) {
+//   arr.sort(function (a, b) {
+//     return a - b;
+//   });
+//   let myNumber = arr.at(-1);
+//   return myNumber;
+// }
+// console.log(maxNumber([1,2,5,75,24,54]));
+
+// ex 25
+// function minNumber(arr) {
+//   arr.sort(function (a, b) {
+//     return a - b;
+//   });
+//   let myNumber = arr[0];
+//   return myNumber;
+// }
+// console.log(minNumber([1,-2,-5,75,-24,54]));
+
+// ex 26
+// employees.sort(function (a, b) {
+//   if (a.firstName < b.firstName){
+//     return -1;
+//   } else if (a.firstName > b.firstName) {
+//     return 1;
+//   } else{
+//     return 0;
+//   }
+// })
+
+// console.log(employees);
+
+
+
+
+// ex 27
+
+
+
+
+
+// ex 28
+// function checkString(str) {
+//   let newString = str.split('').reverse().join('');
+// if (str === newString) {
+//   return true;
+// } else{
+//   return false;
+// }
+// }
+// console.log(checkString('polop'));
+
+// ex 29
+// let myArray = [1, 5, 8, 89, 78];
+// function cloneArray(arr) {
+//   let newArr = arr.map(item => item);
+//   return newArr;
+// }
+// myArray.push(450);
+// console.log(cloneArray(myArray));
+// console.log(myArray);
+
+// ex 30
+// function returnNames(obj) {
+//   let newArr = obj.map(item => item.firstName);
+//   return newArr;
+// }
+// console.log(returnNames(employees));
+
+// ex 31
+// let myArray = [1, 5, 8, 89, 78];
+// function cloneArray(arr) {
+//   let newArr = arr.filter(item => item);
+//   return newArr;
+// }
+// myArray.push(450);
+// console.log(cloneArray(myArray));
+// console.log(myArray);
+
+// ex 32
+// function returnNames(obj, preferedSalary) {
+//   let newArr = obj.filter(item => Number(item.salary.replace('$', '')) > preferedSalary);
+//   return newArr;
+// }
+// console.log(returnNames(employees, 5));
+
+// ex 33
+// Array.prototype.myFilter = function (cb) {
+//   let newArr = [];
+//   for (let i = 0; i < this.length; i++) {
+//     if (cb(this[i], i, this)) {
+//     newArr.push(this[i]);
+//   }    
+//   }
+//   return newArr;
+// }
+
+// ex 34
+// function totalSalary(obj) {
+//   let salary = obj.map(item => Number(item.salary.replace('$', '')));
+//   let total = salary.reduce(function (acc, cur){
+//     let result = acc + cur;
+//     return result;
+//   });
+//   return 'Total salary is $' + total;
+// }
+
+// console.log(totalSalary(employees));
+
+
+
+
+
+// ex 35
+
+
+
+
+// ex 36
+// function checkSalary (obj, sal) {
+//   let minSalary = obj.every(item => Number(item.salary.replace('$', '')) > sal);
+//   return minSalary;
+// }
+// console.log(checkSalary(employees, 1));
+
+// ex 37
+// function checkProfession (obj) {
+//   let profession = obj.every(item => item.isEngineer === true);
+//   return profession;
+// }
+// console.log(checkProfession(employees));
+
+// ex 38
+// function checkSex (obj) {
+//   let sex = obj.every(item => item.gender === 'Male');
+//   return sex;
+// }
+// console.log(checkSex(employees));
+
+// ex 39
+// function checkFemales (obj) {
+//   let females = obj.some(item => item.gender === 'Female');
+//   return females;
+// }
+// console.log(checkFemales(employees));
+
+// // ex 40
+// function checkEngineers (obj) {
+//   let engineers = obj.some(item => item.isEngineer === true);
+//   return engineers;
+// }
+// console.log(checkEngineers(employees));
+
+// ex 41
+// let myArray = [1, 2, -1, 3, 4];
+
+// function checkIndex(arr, num) {
+//   if (arr.indexOf(num) === -1) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
+// console.log(checkIndex(myArray, -1));
+
+// ex 42
+// function findName(obj, nameToFind){
+//     let personData = obj.find(item => item.firstName === nameToFind);
+//     return personData; 
+//   }
+
+//   console.log(findName(employees, 'Rouvin'));
+
+
+
+
+
+// ex 43
+
+
+
+
+// ex 44
+// let myArray = [1, 2, 3, 4, 5];
+// function clone(arr) {
+//   let cloneArray = Array.from(arr);
+//   return cloneArray;
+// }
+// myArray.push(69);
+// console.log(clone(myArray));
+
+// ex 45
+// let myArray = [1, 5, 5, 4, 7, 4];
+// function removeDuplicates(arr) {
+//   let mySet = new Set(arr);
+//   let newArr = Array.from(mySet);
+//   return newArr;
+// }
+// console.log(removeDuplicates(myArray));
+
+// ex 46
+// let str = '1234';
+// let arr = Array.from(str);
+// console.log(arr);
+
+// ex 47
+// let test = [1, 2, 3, 4];
+// Array.prototype.myIncludes = function (check){
+//     let newArr = [];
+//     for (let i = 0; i < this.length; i++){
+//         if (this[i] === check){
+//             newArr.push(this[i]);
+//         } 
+//     }
+//     if (newArr.length > 0){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(test.myIncludes(1));
+
+
+
+
+// ex 48
+
+
+
+
+
+// ex 49
+
+
+
+
+
+// ex 50
+// function prefillArray(text, count) {
+//   let newArr = [];
+//   for (let i = 0; i < count; i++) {
+//     newArr.push(text);
+//   }
+//   return newArr;
+// }
+// console.log(prefillArray('Some text', 4));
+
+
+    </script>
+  </body>
+</html>

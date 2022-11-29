@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework 2</title>
+</head>
+  <body>
+    <script>
+
+  let myArr = [3683,2902,3951,-475,1617,-2385];
+
+  function lowestNumber(arr) {
+    let minNumber1 = arr[0];
+    for (let i = 0; i < arr.length; i++){
+    if (arr[i] < minNumber1 && arr[i] > 0) {
+        minNumber1 = arr[i];
+      }
+    }
+    arr.splice(arr.indexOf(minNumber1), 1);
+    let minNumber2 = arr[0];
+    for (let j = 0; j < arr.length; j++){
+    if (arr[j] < minNumber2 && arr[j] > 0) {
+        minNumber2 = arr[j];
+      }
+    }
+    return minNumber1 + minNumber2;
+  }
+
+
+  document.write(lowestNumber(myArr));
+
+    </script>
+  </body>
+</html>

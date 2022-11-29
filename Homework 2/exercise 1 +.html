@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework 2</title>
+</head>
+  <body>
+    <script>
+
+    function thousandSeparator(num) {
+      if (num > 999) {
+        let firstDig = Math.floor(num / 1000);
+        let lastDig = num % 1000;
+        let res = firstDig + ',' + lastDig;
+        return res;
+      } else {
+        return 'Number is too short';
+      }
+    }
+
+    document.write(thousandSeparator(1524864));
+
+    </script>
+  </body>
+</html>

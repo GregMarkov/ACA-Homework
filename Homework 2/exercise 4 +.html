@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Homework 2</title>
+</head>
+  <body>
+    <script>
+
+function symmetricNumbers(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.indexOf(arr[i]) + arr.lastIndexOf(arr[i]) === arr.length - 1) {
+      continue;
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+  document.write(symmetricNumbers([1, 2, 1]));
+
+
+
+    </script>
+  </body>
+</html>
