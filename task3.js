@@ -7,6 +7,16 @@
   function CarConstructor(model, year) {
     this.mode = model;
     this.year = year;
+    if (this.constructor === CarConstructor) {
+      return this;
+    } else {
+      console.log("please call me with new keyword");
+    }
   }
-  
- 
+
+    
+ CarConstructor('AAA', 2005)
+
+ let car = new CarConstructor('AAA', 2005);
+
+ console.log(car.year);

@@ -5,6 +5,10 @@
   
   const objArr = [{ name: "1" }, { name: "2" }, { name: "3" }, { name: "4" }];
   
-  function logName() {
+  const logName = function () {
     console.log(this.name);
   }
+
+  const newArr = objArr.forEach(el => el.logName = logName);
+
+  objArr[0].logName()

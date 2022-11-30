@@ -15,3 +15,6 @@ const toyota1 = {
     model: "Toyota",
     type: "Rav4",
   };
+
+
+  toyota1.logModel.call(toyota2)
